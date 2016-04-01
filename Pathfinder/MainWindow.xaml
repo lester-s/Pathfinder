@@ -1,0 +1,27 @@
+﻿<Window x:Class="Pathfinder.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Pathfinder"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="600" Width="1100">
+    <Grid Width="1000" Height="500">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*" />
+            <ColumnDefinition Width="8*" />
+        </Grid.ColumnDefinitions>
+        <Grid Grid.Column="0" Name="ToolContainer">
+            <StackPanel Orientation="Vertical">
+                <Button Name="ClearCanvasButton" Content="Clear" Click="ClearCanvasButton_Click" />
+            </StackPanel>
+        </Grid>
+        <Border BorderBrush="Red" BorderThickness="2" Grid.Column="1" Width="500" Height="500">
+            <Canvas Grid.Column="1" Height="500" Width="500" Name="MyCanvas" MouseLeftButtonDown="MyCanvas_MouseLeftButtonDown" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+                <Canvas.Background>
+                    <SolidColorBrush Color="White" Opacity="0" />
+                </Canvas.Background>
+            </Canvas>
+        </Border>
+    </Grid>
+</Window>
