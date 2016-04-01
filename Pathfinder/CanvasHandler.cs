@@ -35,7 +35,7 @@ namespace Pathfinder
         private void InitTiles()
         {
             //you can change this variable for a more or less accurate grid on the canvas
-            TileAmount = 50;
+            TileAmount = 70;
             TilesArray = new Square[TileAmount, TileAmount];
             SquareSize = MyCanvas.Height / TileAmount;
 
